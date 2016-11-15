@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Welcome To Trivia</title>
+	<link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+	<script src="javascripts/app.js">
+	</script>
+	<script src="/socket.io/socket.io.js">
+	</script>
+	<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<h1>TRIVIA</h1>
+		</div>
+	</header><img alt="Demo Image" src="http://mybarhop.lookoutcreations.com/sites/default/files/topnews/homer2.png">
+	<main>
+		<div class="container">
+			<div class="ui grid">
+				<div class="four wide column">
+					<div id="onlineUser">
+						Users Online:
+						<div>
+							<div id='userList'></div>
+						</div>
+					</div>
+				</div>
+				<div class="twelve wide column">
+					<div id="divScore">
+						<div id="divBtnScore" style="float:right">
+							<div class="ui olive label" id="score">
+								<h3>Score:</h3>
+								<textarea class="ui label" id="correctAns">Correct Answer</textarea> 
+								<textarea class="ui label" id="wrongAns">Wrong Answer</textarea>
+							</div>
+						</div>
+						<div id="addingQueDiv" style="float:right">
+							<input class="ui olive button" id="addingQue" name="addButton" style="display:none" type="button" value="Add a question?">
+						</div>
+					</div>
+					<div style="height:5px; width:100%"></div>
+					<div id="letsPlayDiv">
+						<div class="field">
+							<input id="user" name="userName" placeholder="Enter your username" type="text"> <input class="ui olive button" id="letsPlay" name="playButton" type="button" value="Start Round!"><br>
+						</div>
+					</div>
+					<div id="displayQuestion">
+						<input id="questionAsked" type="hidden"> <input id="answerAsked" type="hidden"> <input id="currentUser" type="hidden">
+						<div class="btn" id="allQuestion">
+							<div class="ui olive label">
+								Question
+							</div>
+							<textarea class="ui olive label" id="question"></textarea><br>
+							<div class="ui olive label">
+								Answer
+							</div>
+							<textarea class="ui olive label" id="answer"></textarea><br>
+							<input class="ui olive label" id="sendBtn" type="button" value="Submit"> <input class="ui olive label" id="nextQuestion" type="button" value="Next"><br>
+						</div>
+					</div>
+					<div id="addQueDivId" style="display : none">
+						<div class="ui olive label">
+							Type a question
+						</div>
+						<textarea class="ui olive label" id="questionId"></textarea><br>
+						<div class="ui olive label">
+							Answer
+						</div>
+						<textarea class="ui olive label" id="answerId"></textarea><br>
+						<input class="ui olive button" id="submitBtnId" type="button" value="Submit"><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
