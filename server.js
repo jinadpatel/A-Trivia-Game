@@ -1,3 +1,22 @@
+/*{
+    "node": true,
+    "camelcase": true,
+    "indent": 4,
+    "undef": true,
+    "quotmark": "single",
+    "maxlen": 80,
+    "trailing": true
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "nonew": true,
+    "unused": true,
+    "strict": true
+}*/
+
 var express = require('express'),
 	app = express(),
 	http = require('http').Server(app),
@@ -27,7 +46,6 @@ var triviaSchema = new mongoose.Schema({
 	answer: String
 });
 var collectionName = 'questionBank';
-// Create a database collection model
 var triviaDB = mongoose.model('triviaGame', triviaSchema, collectionName);
 var connectionArr = [];
 var userNameArr = [];
@@ -120,6 +138,9 @@ app.post('/question', function(req, res) {
 			getQuestion(randomQuestion);
 		});
 	};
+	// For assert we refered to: 
+	//1. http://stackoverflow.com/questions/28129223/node-js-assert-module-in-mongodb-driver-documentation
+	//2. https://libraries.io/npm/mongodb/2.0.24 	
 	MongoClient.connect(url, function(err, db) {
 		assert.equal(null, err);
 		insertDocument(db, function() {
