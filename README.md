@@ -1,4 +1,4 @@
-# CPSC-473-Assignment-5
+# A-Trivi-Game
 
 clone this folder to virtual machine
 
@@ -11,3 +11,5 @@ start redis
 Type "node server.js"
 
 Go to localhost:3000
+
+Technologies: HTML5, CSS3, SemanticUI, Javascript, jQuery, Node.js, MongoDB, Redis
